@@ -9,6 +9,7 @@ For UI declarations I use [Blueprint](https://gitlab.gnome.org/jwestman/blueprin
 - [Libadwaita documentation](https://gnome.pages.gitlab.gnome.org/libadwaita/doc/1-latest/index.html)
 - [GTK4 documentation](https://docs.gtk.org/gtk4/index.html)
   - [GTK4 classes](https://docs.gtk.org/gtk4/index.html#classes)
+- [Blueprint documentation](https://jwestman.pages.gitlab.gnome.org/blueprint-compiler/examples.html)
 - [gtk-rs documentation](https://gtk-rs.org/gtk4-rs/stable/latest/docs/gtk4/index.html)
 - [gtk-rs examples](https://github.com/gtk-rs/gtk4-rs/tree/master/examples)
 
