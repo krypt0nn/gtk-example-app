@@ -1,0 +1,55 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ApplicationWindow window {
+    default-width: 260;
+    default-height: 100;
+
+    content: Gtk.Box {
+        orientation: vertical;
+
+        Adw.HeaderBar {
+            title-widget: Adw.WindowTitle {
+                title: "Example app";
+            };
+
+            [end]
+            Gtk.MenuButton menu {
+                menu-model: app_menu;
+                icon-name: "open-menu-symbolic";
+                halign: end;
+                valign: center;
+                margin-start: 12;
+            }
+        }
+
+        Adw.PreferencesPage {
+            Adw.PreferencesGroup {
+                Gtk.Button hello_rust {
+                    label: "Hello, Rust!";
+                }
+
+                Gtk.Label greetings_counter {
+                    label: "Greetings: 0";
+                    margin-top: 16;
+                }
+            }
+        }
+    };
+}
+
+Gtk.AboutDialog about {
+    license: "GPL-3.0";
+    version: "0.1.0";
+    comments: "Example app that uses GTK4 and libadwaita\nwritten on Rust and Blueprints";
+
+    // authors can't be specified here now due to blueprints issue
+}
+
+// Idk how to specify action handler from Rust
+// so it's not usable for now
+menu app_menu {
+    item ("About Example App 1")
+    item ("About Example App 2")
+    item ("About Example App 3")
+}

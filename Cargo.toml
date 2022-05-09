@@ -1,0 +1,15 @@
+[package]
+name = "gtk-example-app"
+version = "0.1.0"
+description = "gtk4 + libadwaita + rust example application"
+keywords = ["gui", "gtk", "libadwaita"]
+authors = ["Your Name <your@email>"]
+license = "GPL-3.0"
+readme = "README.md"
+repository = "https://github.com/krypt0nn/gtk-example-app"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+gtk4 = "0.4"
+libadwaita = "0.1"
