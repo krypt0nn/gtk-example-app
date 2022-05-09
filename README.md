@@ -16,7 +16,7 @@ For UI declarations I use [Blueprint](https://gitlab.gnome.org/jwestman/blueprin
 ## Clone repo
 
 ```sh
-git clone --recursive https://github.com/krypt0nn/gtk-example-app
+git clone --recursive https://github.com/krypt0nn/gtk-example-app ./my-app
 ```
 
 | Folder | Description |
