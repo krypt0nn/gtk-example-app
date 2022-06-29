@@ -2,8 +2,8 @@ using Gtk 4.0;
 using Adw 1;
 
 Adw.ApplicationWindow window {
-    default-width: 260;
-    default-height: 100;
+    default-width: 320;
+    default-height: 180;
 
     content: Gtk.Box {
         orientation: vertical;
@@ -42,8 +42,6 @@ Gtk.AboutDialog about {
     license: "GPL-3.0";
     version: "0.1.0";
     comments: "Example app that uses GTK4 and libadwaita\nwritten on Rust and Blueprints";
-
-    // authors can't be specified here now due to blueprints issue
 }
 
 // Idk how to specify action handler from Rust

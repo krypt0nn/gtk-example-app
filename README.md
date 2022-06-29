@@ -12,6 +12,8 @@ For UI declarations I use [Blueprint](https://gitlab.gnome.org/jwestman/blueprin
 - [Blueprint documentation](https://jwestman.pages.gitlab.gnome.org/blueprint-compiler/examples.html)
 - [gtk-rs documentation](https://gtk-rs.org/gtk4-rs/stable/latest/docs/gtk4/index.html)
 - [gtk-rs examples](https://github.com/gtk-rs/gtk4-rs/tree/master/examples)
+- [Freedesktop icon names specification](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html)
+  - You can add `-symbolic` postfix to them. So you can, e.g., use both `edit-find` and `edit-find-symbolic`. The last one is flat
 
 ## Clone repo
 
@@ -21,8 +23,9 @@ git clone --recursive https://github.com/krypt0nn/gtk-example-app ./my-app
 
 | Folder | Description |
 | - | - |
-| ui | Blueprint UI files |
-| ui/.dist | UI files compiled by the blueprint |
+| assets | Assets folder for images and so |
+| assets/ui | Blueprint UI files |
+| assets/ui/.dist | UI files compiled by the blueprint |
 | src | Rust source code |
 | target/release | Release build of the app |
 | blueprint-compiler | Blueprint compiler |
