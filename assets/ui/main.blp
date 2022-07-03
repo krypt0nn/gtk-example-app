@@ -2,8 +2,8 @@ using Gtk 4.0;
 using Adw 1;
 
 Adw.ApplicationWindow window {
-    default-width: 320;
-    default-height: 180;
+    default-width: 600;
+    default-height: 500;
 
     content: Gtk.Box {
         orientation: vertical;
@@ -25,12 +25,25 @@ Adw.ApplicationWindow window {
 
         Adw.PreferencesPage {
             Adw.PreferencesGroup {
-                Gtk.Button hello_rust {
-                    label: "Hello, Rust!";
+                vexpand: true;
+                valign: center;
+
+                Gtk.Box {
+                    orientation: horizontal;
+                    spacing: 8;
+                    halign: center;
+
+                    Gtk.Button increment {
+                        label: "+1";
+                    }
+
+                    Gtk.Button decrement {
+                        label: "-1";
+                    }
                 }
 
-                Gtk.Label greetings_counter {
-                    label: "Greetings: 0";
+                Gtk.Label counter {
+                    label: "Counter: 0";
                     margin-top: 16;
                 }
             }

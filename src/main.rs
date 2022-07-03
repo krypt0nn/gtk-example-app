@@ -19,18 +19,7 @@ fn main() {
     application.connect_activate(|app| {
         let app = MainApp::new(app);
 
-        // Set button event
-        app.hello_rust.connect_clicked(move |_| {
-            // Parse counter
-            let counter = app.greetings_counter.label()[11..].parse::<u32>().unwrap();
-
-            // And update label text
-            app.greetings_counter.set_label(format!("Greetings: {}", counter + 1).as_str());
-
-            // app.about.show();
-        });
-
-        app.window.show();
+        app.show();
     });
 
     // Run app
