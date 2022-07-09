@@ -1,9 +1,10 @@
 use gtk4::{self as gtk, prelude::*};
 use libadwaita::{self as adw, prelude::*};
 
-pub mod ui;
+use gtk::glib;
+use gtk::glib::clone;
 
-use ui::MainApp;
+pub mod ui;
 
 fn main() {
     gtk::init().expect("GTK initialization failed");
@@ -17,7 +18,16 @@ fn main() {
 
     // Init app window and show it
     application.connect_activate(|app| {
-        let app = MainApp::new(app);
+        let app = ui::main::App::new(app);
+
+        // Increment counter every second
+        std::thread::spawn(clone!(@strong app => move || {
+            loop {
+                app.update(ui::main::Actions::Increment);
+
+                std::thread::sleep(std::time::Duration::from_secs(1));
+            }
+        }));
 
         app.show();
     });

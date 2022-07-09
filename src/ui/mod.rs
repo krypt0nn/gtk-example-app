@@ -1,9 +1,7 @@
 use gtk4::{self as gtk, prelude::*};
 use libadwaita::{self as adw, prelude::*};
 
-mod main;
-
-pub use main::App as MainApp;
+pub mod main;
 
 /// This function loads object from builder or panics if it doesn't exist
 pub fn get_object<T: IsA<gtk::glib::Object>>(builder: &gtk::Builder, name: &str) -> T {
